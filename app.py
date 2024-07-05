@@ -9,7 +9,7 @@ load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 s3 = boto3.client('s3')
-ses = boto3.client('ses', region_name='your-region')  # e.g., 'us-east-1'
+ses = boto3.client('ses', region_name='us-east-1')  # e.g., 'us-east-1'
 
 BUCKET_NAME = os.getenv('BUCKET_NAME')
 EMAIL_ADDRESS = os.getenv('EMAIL_ADDRESS')
